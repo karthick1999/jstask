@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="container"> 
+      
+    <div class="formarea">    
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="left">
+                <h2>Welcome Back !</h2> 
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, laborum tenetur?
+                     alias eos voluptas quaerat inventore. Provident quasi maiores, nemo ut asper
+                     natur corporis!
+                </p> 
+                <div class="signin" id="siginbtn">
+                    <button type="button" class="btn btn-outline-success signinbtn" onclick="movetologin()">sign in</button>
+                </div>
+                <div class="signin" id="signupbtn" style="display: none;">
+                  <button type="button" class="btn btn-outline-success signinbtn" onclick="movetoregister()">sign up</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8">
+          <div class="right" >
+              <h2>Create Account</h2> 
+             
+              <div>
+                  <ul class="socail-icons">
+                      <li><i class="fab fa-facebook"></i></li>
+                      <li><i class="fab fa-google-plus-g"></i></li> 
+                      <li><i class="fab fa-linkedin-in"></i></li>
+                  </ul>
+              </div>
+            <div>
+              <input accept="image/*" type='file' id="imgInp" value=""/>
+              <img id="blah" src="./img_avatar.png" alt="your image"  style="height: 100px;border-radius: 50%; width: 100px;"/>
+              <span id="noimageerror" style="display: none; color: red;">Enter jpg jpeg format</span>
+              <span id="noimg" style="display: none;">upload image</span>
+            </div>
+              <form>
+                <div class="form-group"> 
+                    <div>
+                        <label for=""> Name</label>
+                    </div>
+                   <div>
+                    <input type="email" class="form-input" id="exampleInputName" aria-describedby="emailHelp" >
+                    <span style="display: none; " id="nonameerror">Enter user name</span>
+                   </div>
+                  </div>
+                <div class="form-group">
+                  <div>
+                    <label for="">PhoneNumber</label>
+                  </div> 
+                  <div>
+                    <input type="text" onkeypress="return isNumberKey(event)" class="form-input" id="exampleInputPhoneNumber" aria-describedby="emailHelp">
+                    <span id="nophonnumbererror" style="display: none; ">Enter phonenumber</span>
+                  </div>
+                  </div>
+                  <div class="form-group">
+                    <div>
+                      <label for="exampleInputEmail1">Gender</label>
+                    </div> 
+                    <div>     
+                      <input type="radio" name="gender" value="female">
+                      <label for="">female</label><br>
+                      <input type="radio" name="gender" value="male">
+                      <label for="">Male</label>
+                    </div> 
+                    <span id="nogendererror" style="display: none;">Select gender</span>
+                    </div>
+                <div class="form-group">
+                 <div>
+                    <label for="">Email address</label>
+                 </div>
+                 <div>
+                    <input type="text"  class="form-input" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <span id="noemailerror" style="display: none; ">Enter email</span>
+                  </div>
+                </div>
+                  <div class="form-group">
+              <div>
+                <label for="">Address</label>
+              </div>
+                 <div>
+                   <textarea name="address" id="addressField" cols="30" rows="3"></textarea>
+                   <span id="noaddresserror" style="display: none; ">Enter Address</span>
+                 </div>
+                </div>
+                <div class="form-group">
+              <div>
+                <label for="">Password</label>
+              </div>
+                 <div>
+                    <input type="password"  class="form-input" id="exampleInputPassword1"> 
+                    <span id="nopassworderror" style="display: none; ">Enter password</span>
+                 </div>
+                </div>
+                <button type="button" class="btn btn-outline-primary" onclick="formvalidation()">Register</button>
+              </form>
+            
+            </div> 
+            <div class="right-login" style="display:none;">
+               
+              <form>
+                <div class="form-group">
+                 <div>
+                    <label for="loginemail">Email address</label>
+                 </div>
+                 <div>
+                    <input type="email" class="form-input" id="loginemail" aria-describedby="emailHelp">
+                    <span id="noemail" style="display: none;">Enter Email</span>
+                    <span id="incorrectemail"  style="display: none;">Enter correct Email</span>
+                 </div>
+                </div>
+                <div class="form-group">
+              <div>
+                <label for="loginPassword">Password</label>
+              </div>
+                 <div>
+                    <input type="password" class="form-input" id="loginPassword">
+                    <span id="nopassword" style="display: none;">Enter password</span>
+                    <span id="incorrectpassword"  style="display: none;">Enter correct password</span>
+                 </div>
+                </div>
+                <button type="button" class="btn btn-outline-primary" onclick="loginvalidation()">Login</button>
+              </form>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+</div> 
+</body> 
+<script> 
+function formvalidation(e){ 
+var name=document.getElementById("exampleInputName").value;  
+var password=document.getElementById("exampleInputPassword1").value; 
+var PhoneNumber=document.getElementById("exampleInputPhoneNumber").value; 
+var email=document.getElementById("exampleInputEmail1").value; 
+var address=document.getElementById("addressField").value.trim(); 
+var option=document.getElementsByName('gender'); 
+var image=document.getElementById("imgInp").value;
+console.log("######image#####3",image);
+const mailpattern=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/; 
+if(!image){
+  document.getElementById("noimg").style="display:block;color:red;";
+}
+else{
+  document.getElementById("noimg").style="display:none;color:red;";
+}
+if (!(option[0].checked || option[1].checked)) {
+    document.getElementById("nogendererror").style="display:block; color:red;"
+} 
+else{
+  document.getElementById("nogendererror").style="display:none"
+}
+if(!name){
+document.getElementById("nonameerror").style="display:block;color: red;";
+} 
+else{
+  document.getElementById("nonameerror").style="display:none";
+} 
+if(!PhoneNumber){
+  document.getElementById("nophonnumbererror").style="display:block;color: red;";
+}  
+else{
+  document.getElementById("nophonnumbererror").style="display:none";
+}
+if(!email){
+  document.getElementById("noemailerror").style="display:block;color: red;";
+}  
+else{
+  if(!mailpattern.test(email)){
+    alert("Not a valid mail ")
+  }
+  document.getElementById("noemailerror").style="display:none";
+}
+if(!password){
+  document.getElementById("nopassworderror").style="display:block;color: red;";
+}  
+else{ 
+  if(password.length<8 ){
+    alert("Enter mainimum 8 character for password")
+  }
+  document.getElementById("nopassworderror").style="display:none";
+}
+if(!address){
+  document.getElementById("noaddresserror").style="display:block;color: red;";
+}  
+else{
+  document.getElementById("noaddresserror").style="display:none";
+}
+console.log("****name***",name);
+console.log("****email***",email); 
+console.log("****Address***",address);
+console.log("****phoneNuber***",PhoneNumber); 
+if(name && email && password&&PhoneNumber&&address&& option){
+  console.log("next page on)))))))))))))))))))))))")
+  document.getElementsByClassName("right")[0].style="display:none"
+  document.getElementsByClassName("right-login")[0].style="display:block"
+}
+}
+function isNumberKey(evt)
+      {    
+      if(evt.charCode>47 && evt.charCode<=57){
+        console.log(evt.charCode) 
+        return true;
+      } 
+      else{
+        return false;
+      }
+      }
+function movetologin(){
+  console.log("button666666666666666666666 clicked")
+  document.getElementById("siginbtn").style="display:none;"
+  document.getElementById("signupbtn").style="display:block;"
+  document.getElementsByClassName("right")[0].style="display:none;"
+  document.getElementsByClassName("right-login")[0].style="display:block;"
+  document.getElementsByClassName("col-lg-8")[0].style="height:800px;background-color:lightgrey;"
+  document.getElementsByClassName("col-lg-4")[0].style="height:800px;background-color:lightgrey;"
+  document.getElementsByClassName("formarea")[0].style="height:800px;background-color:lightgrey;"
+}
+function movetoregister(){
+  document.getElementById("siginbtn").style="display:block;"
+  document.getElementById("signupbtn").style="display:none;"
+  document.getElementsByClassName("right")[0].style="display:block;"
+  document.getElementsByClassName("right-login")[0].style="display:none;"
+  document.getElementsByClassName("col-lg-8")[0].style="height:1200px;"
+  document.getElementsByClassName("col-lg-4")[0].style="height:1200px;"
+  document.getElementsByClassName("formarea")[0].style="height:1200px;"
+}
+ imgInp.onchange = evt => {
+  const [file] = imgInp.files;  
+  console.log(file)
+  var ext=(file.type.split("/")); 
+  // if(!ext[-1].includes(["jpg","png","jpeg"])){
+  //   alert("enter correct image format");
+  // }  
+  console.log(ext[1])
+  if(["jpeg","jpg"].includes(ext[1])) {
+    // alert("good image format --"+ext[1]);
+    document.getElementById("noimageerror").style="display:none"
+  } 
+  else{
+    //alert("wrong format"+ext[1]);
+    document.getElementById("noimageerror").style="display:block;color:red"
+  }
+  if (file) {
+    blah.src = URL.createObjectURL(file)
+  } 
+
+}
+function loginvalidation(){
+  var email=document.getElementById("loginemail").value; 
+  var password=document.getElementById("loginPassword").value; 
+  const mailpattern=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  if(!email){
+    // alert("enter email") 
+    document.getElementById("noemail").style="display:block;color:red;"
+  } 
+  else{
+    document.getElementById("noemail").style="display:none;color:red;"
+    if (! mailpattern.test(email)){
+      document.getElementById("incorrectemail").style="display:block;color:red;"
+      // alert("Enter correct Email")
+    }
+    else{
+      document.getElementById("incorrectemail").style="display:none;color:red;" 
+      localStorage.setItem("usermailid",email);
+    }
+  } 
+  if(!password){
+    // alert("enter password")
+    document.getElementById("nopassword").style="display:block; color:red"
+  } 
+  else{
+    document.getElementById("nopassword").style="display:none; color:red"
+    if(password.length<8){
+      document.getElementById("incorrectpassword").style="display:block; color:red"
+    } 
+    else{
+      document.getElementById("incorrectpassword").style="display:none; color:red" 
+      window.location.href="addstudents.html";
+     // localStorage.setItem("userpassword",password);
+    }
+  }
+} 
+</script>
+</html>

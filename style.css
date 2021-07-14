@@ -1,0 +1,168 @@
+ @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@200&display=swap'); 
+*{ 
+    padding: 0px; 
+    margin: 0px;
+}
+.formarea{
+    margin-top: 120px;
+    margin-left: 50px;
+    background-color: bisque;
+    height: 1200px;
+    margin-bottom: 50px;
+} 
+img{
+    object-fit: cover;
+}
+.col-lg-4{
+    background-color: rgb(116, 236, 236);
+    height: 1200px;
+}
+.left{
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px; 
+    margin-top: 100px;
+} 
+.signin{
+    margin: 50px 0px; 
+    margin-left: 50px;
+}  
+.signinbtn{
+    width: 110px; 
+    border: 2px solid whitesmoke; 
+    border-radius: 10px; 
+}
+.col-lg-8{
+    height: 1200px;
+}
+.right{
+    margin-left: 190px;
+    margin-top: 30px;
+}
+.form-input{
+    width: 200px;
+    height: 30px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+.socail-icons{
+    list-style-type: none;
+    margin-top: 20px;
+}  
+li{
+    display: inline;
+    padding: 0px 20px;
+    font-size: 25px;
+}
+.btn-outline-primary{ 
+
+margin-left: 30px; 
+margin-top: 20px;
+}
+.right-login{
+    margin-left: 190px;
+    margin-top: 30px;
+}
+/* add students Page */
+.addinfo{
+    /* background-color: aquamarine; */
+    color: #FB9300;
+    margin: 50px 300px; 
+    font-family: 'Encode Sans SC', sans-serif;
+} 
+.add-btn{
+}
+.btn-light{
+    width: 100px;
+    margin: 24px;
+    margin-left: 47px; 
+    transition: width 2s;
+}
+.btn-secondary:hover{
+background-color: burlywood;
+}
+.btn-light:hover{
+    width: 130px;
+   
+}
+.deatials{
+    margin: 20px;
+}
+.poster{
+    font-family: 'Encode Sans SC', sans-serif;
+  color: #FB9300;
+    margin: 50px 300px;
+    padding: 50px;
+} 
+.display{
+      color: #184D47; 
+   
+    font-family: 'Cinzel', serif;
+    /* font-family: 'Satisfy', cursive; */
+} 
+.display p{
+font-weight: 600;
+    color: #184D47;
+    font-size: 20px;
+    font-family: 'Cinzel', serif;
+}
+#toplogo{
+    margin: 50px 100px;
+}
+.col-lg-3{
+    border: 1px groove #E98580;
+    padding: 12px;
+    text-align: center;
+} 
+.btn-primary{
+    margin: 50px;
+    margin-left: 200px;
+}
+ /* anim gho */
+ .containers {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+  }
+  
+  .ghost {
+   color: #ff4814;
+    animation: float 3s ease-out infinite;
+  }
+  
+  @keyframes float {
+    50% {
+       transform: translate(0, 20px);
+    }
+  }
+  .shadowFrame {
+    width: 130px;
+    margin-top: 15px;
+  }
+  .shadow {
+    animation: shrink 3s ease-out infinite;
+    transform-origin: center center;
+   
+  }
+  ellipse {
+    transform-origin: center center;
+  }
+  @keyframes shrink {
+    0% {
+      width: 90%;
+      margin: 0 5%;
+    }
+    50% {
+      width: 60%;
+      margin: 0 18%;
+    }
+    100% {
+      width: 90%;
+      margin: 0 5%;
+    }
+  }
+ /* bg */
+ 
